@@ -8,7 +8,8 @@
 ---
 ## **Javascript**
 >### Dream Coding Ellie
-<div align="center"><img src="./img/Momentum.png" width="700px" height="450px" alt="structure"></img></div>
+<div align="left"><img src="DreamCoding/asset/img/자바스크립트.png" width="700px" height="450px" alt="dreamcoding"></img></div>
+
 - [드림코딩 학습 노트 1 - 변수 , 데이터타입](https://blog.naver.com/goawmfhfl1/222337915001)
 - [드림코딩 학습 노트 2 - 연산자 (operate, if, for loof)](https://blog.naver.com/goawmfhfl1/222340080322)
 - [드림코딩 학습 노트 3 - 함수 선언](https://blog.naver.com/goawmfhfl1/222341108210)
