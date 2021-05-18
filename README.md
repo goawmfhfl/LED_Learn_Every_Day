@@ -8,16 +8,16 @@
 ---
 ## **Javascript**
 >### Dream Coding Ellie
-- [드림코딩 학습 노트 1 - 변수 , 데이터타입]()
-- [드림코딩 학습 노트 2 - 연산자 (operate, if, for loof)]()
-- [드림코딩 학습 노트 3 - 함수 선언]()
-- [드림코딩 학습 노트 4 - Class 객체지향언어]()
-- [드림코딩 학습 노트 5 - Object]()
-- [드림코딩 학습 노트 6 - Array]()
+- [드림코딩 학습 노트 1 - 변수 , 데이터타입](https://blog.naver.com/goawmfhfl1/222337915001)
+- [드림코딩 학습 노트 2 - 연산자 (operate, if, for loof)](https://blog.naver.com/goawmfhfl1/222340080322)
+- [드림코딩 학습 노트 3 - 함수 선언](https://blog.naver.com/goawmfhfl1/222341108210)
+- [드림코딩 학습 노트 4 - Class 객체지향언어](https://blog.naver.com/goawmfhfl1/222342884728)
+- [드림코딩 학습 노트 5 - Object](https://blog.naver.com/goawmfhfl1/222343702791)
+- [드림코딩 학습 노트 6 - Array](https://blog.naver.com/goawmfhfl1/222348019526)
 - [드림코딩 학습 노트 7 - 배열에서 자주 쓰는 함수]()
-- [드림코딩 학습 노트 8 - JSON 개념 정리]()
-- [드림코딩 학습 노트 9 - 비동기 처리 , callback]()
-- [드림코딩 학습 노트 10 - Promise 개념 및 활용]()
+- [드림코딩 학습 노트 8 - JSON 개념 정리](https://blog.naver.com/goawmfhfl1/222350916479)
+- [드림코딩 학습 노트 9 - 비동기 처리 , callback](https://blog.naver.com/goawmfhfl1/222354478967)
+- [드림코딩 학습 노트 10 - Promise 개념 및 활용](https://blog.naver.com/goawmfhfl1/222356214171)
 
 
 
