@@ -13,6 +13,7 @@
 // promise를 이해하기 위해서의 두가지 point
 
 // 1. state 상태의 이해 필요
+
 // state : pending (대기상태)-> fulfilled or rejected
 // 기능을 수행하고 있는 중인지?
 // 기능을 수행하고나서 성공했는지 실패했는지 이해하는 과정에 대한 이해 필요
