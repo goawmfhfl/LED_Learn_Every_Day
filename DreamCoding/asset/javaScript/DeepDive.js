@@ -1244,3 +1244,157 @@ console.clear()
     // 자기 자신을 호출하는 재귀 함수를 사용하면 박복되는 처리를 반복문
     // 없이 구현할 수 있다.
 }
+
+// 이부분은 이해가 잘 안된다. 너무 얿다..
+{
+    var factorial = function foo(n){
+        // 탈출 조건 n이 1이하일 때 재귀 호출을 멈춘다
+        if (n <= 1) return 1;
+        // 함수를 가리키는 식별자로 자기 자신을 재귀 호출
+        return n * factorial(n - 1)
+    }
+    console.log(factorial(5))
+}
+
+// 재귀 함수는 자신을 무한 재귀 호출한다. 재귀 호출을 멈출 수 있는 탈출 조건을 반드시 만들어야 한다.
+{
+    function factorial(n){
+        if( n <= 1 ) return 1
+
+        
+        var res = n;
+        while(--n) res *= n
+        return res;
+    }
+    // res = 3 * =  3 * 3 
+    // res = 9 * = 9 * 2
+    // res = 18 * = 18 * 1
+    console.log(factorial(3)) //  3 * 2 * 1
+    console.log(factorial(4)) //  4 * 3 * 2 * 1
+    console.log(factorial(5)) // 5 * 4 * 3 * 2 * 1
+}
+
+
+//12.7.3 중첩함수
+{
+    function outer(){
+        var x = 1;
+        // 중첩 함수
+        function inner(){
+            var y = 2;
+            // 외부 함수의 변수를 참조할 수 있다
+            console.log( x+y )
+        }
+        inner()
+    }
+    outer()
+}
+
+
+//12.7.4 콜백함수
+{
+    // n만큼 어떤 일을 반복한다
+    function repeat1(n){
+        // i를 출력한다
+        for (var i = 0; i < n; i++) console.log(i)
+    }
+    repeat1(5) // 0 1 2 3 4
+
+    // n만큼 어떤 일을 반복한다
+    function repeat2(n){
+        for (var i = 0; i < n; i++){
+            // i가 홀수일 때만 출력한다
+            if(i % 2)(console.log('repeat2 :',i))
+        }
+    }
+    repeat2(5) // 1 3 
+}
+
+{
+    //외부에서 전달받은 f를 n만큼 반복 호출한다
+    function repeat (n,f){
+        for (var i = 0; i < n; i++){
+            f(i) // i를 전달하면서 f호출
+            // console.log('logAll : ',i) // logAll : 0 1 2 3 4
+        }
+    }
+
+    var logAll = function(i){
+        console.log('logAll : ',i) // logAll : 0 1 2 3 4
+    }
+
+    repeat (5,logAll) // 0 1
+    repeat (5,function(i){
+        if(i % 2) console.log('고차함수',i);
+    }) // 고차함수 : 1 3 출력
+    
+    var logOdds = function (i){
+        if ( i % 2){
+            console.log('logOdds :', i)
+        }
+    }
+    repeat (5 , logOdds) // logOdds: 1 3
+        
+}
+// 고차 함수는 매개변수를 통해 전달받은 콜백 함수의 호출 시점을 결정해서 호출한다
+// 다시 말해 콜백 함수는 고차 함수에 의해 호출되며
+// 이때 고차 함수는 필요에 따라 콜백 함수에 인수를 전달할 수 있다
+// 따라서 고차함수에 콜백 함수를 전달할 때 콜백 함수를 호출하지 않고 함수 자체를 전달해야 한다
+
+{
+    var res = [1,2,3].map(function (item){
+       return item * 2; 
+    })
+    console.log('map :',res); //map : (3) [2, 4, 6]
+
+    res = [1, 2, 3].filter(function(item){
+       return item % 2
+    })
+    console.log('filter :' ,res) // filter : (2) [1, 3]
+
+    res = [1, 2, 3].reduce(function(acc, cur){
+        return acc + cur
+    },0);
+    console.log('reduce :', res) // reduce : 6
+}
+
+// 12.7.5 순수 함수와 비순수 함수
+// 함수형 프로그래밍에서는 어떤 외부 상태에 의존하지도 않고 변경하지도 않는,
+// 즉 부수 효과가 없는 함수를 순수 함수라 하고
+// 외부 상태에 의존하거나 외부 상태를 변경하는, 즉 부수 효과가 있는 함수를 비순수 함수라고 한다.
+
+{
+    // 순수함수
+
+    var count = 0; // 현재 카운트를 나타내는 상태
+    // 순수 함수 increase 는 동일한 인수가 전달되면 언제나 동일한 값을 반환한다.
+    function increase(n){
+        return ++n
+    }
+
+    // 순수 함수가 반환한 결과값을 변수에 재할당해서 상태를 변경
+    count = increase(count);
+    console.log(count) // 1
+    count = increase(count);
+    console.log(count) // 2
+}
+{
+    // 비순수 함수
+    // 비순수 함수는 외부 상태에 의존하거나 외부 상태를 변경하는 함수다
+
+var count = 0
+
+function increase(){
+    return ++count
+}
+increase();
+console.log(count) // 1
+increase();
+console.log(count) // 2
+}
+// 함수가 외부 상태를 변경하면 상태 변화를 추적하기 어려워진다. 따라서 함수 외부 상태의 변경을
+// 지양하는 순수 함수를 사용하는 것이 좋다.
+
+// 함수형 프로그래밍은 결국 순수 함수를 통해 부수 효과를 최대한 억제해 오류를 피하고 프로그램의
+// 안정성을 높이려는 노력의 일환이라 할 수 있다. 자바스크립트는 멀티 패러다임 언어이므로 객체지향
+// 프로그래밍뿐만 아니라 함수형 프로그래밍을 적극적으로 활용하고 있다.
