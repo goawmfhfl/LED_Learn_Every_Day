@@ -194,7 +194,6 @@ isTruthy([])
 // 4. 논리합(||) 연산자는 두 개의 피연산자 중 하나만 true 평가될 때 true를 반환한다
 // 5. 논리 연산의 결과를 결정한 첫 번째 피연산자를 바로 반환한다
 // 논리곱과 논리합 연산자는 논리 연산의 결과를 결정하는 피연산자를 타입 변환하지 않고 그대로 반환한다
-// 이를 단축 평가라고한다.
 // 단축평가는 표현식을 표현하는 도중에 평가 결과가 확정된 경우 나머지 평가 과정을 생략하는 것을 말한다
 
 {
@@ -209,7 +208,6 @@ isTruthy([])
     'Cat' && false // false
 }
 
-console.clear()
 // 단축 평가를 사용하면 if 문을 대체할 수 있다.
 // 어떤 조건이 Truthy 값(참으로 평가되는 값)일 때
 // 무언가를 해야 한다면 논리곱(&&) 연산자 표현식으로 if문을 대체할 수 있다
@@ -286,7 +284,7 @@ function getStringLength(str = ''){
 }
 getStringLength(); // 0
 getStringLength('hi'); // 2
-getStringLength('hello')
+getStringLength('hello') // 5
 
 }
 
@@ -326,7 +324,7 @@ getStringLength('hello')
     //문자열의 길이를 참조한다. 이때 좌항 피연산자가 flase로 평가되는 Falsy 값이라도
     // null 또는 undefined가 아니면 우항의 프로퍼티 참조를 이어간다.
     var length = str?.length;
-    console.log(length)
+    console.log('length :',length)  // length : 0
 }
 
 // 9.4.3 null 병합 연산자
@@ -442,12 +440,7 @@ console.log(" 5월 21일 금요일 공부 기록입니다 ")
     var obj = {}
     var key = 'hello'
     obj[key] = 'world'
-    console.log(obj)
-
-    var obj2 = {}
-    var key2 = 'hello'
-    obj2[key2] = 'world'
-    console.log(obj2)
+    console.log(obj) //  {hello: "world"}
 }
 
 {
@@ -534,7 +527,7 @@ console.log(" 5월 21일 금요일 공부 기록입니다 ")
 // 10.7 프로퍼티 동적 생성
 
 {
-    var person = {
+    let person = {
         name : 'jaeyoung'
     }
     person.age = 20;
@@ -543,7 +536,6 @@ console.log(" 5월 21일 금요일 공부 기록입니다 ")
     // 프로퍼티 값이 할당된다.
 }
 
-console.clear()
 // 10.8 프로퍼티 삭제
 
 {
@@ -560,7 +552,7 @@ console.clear()
     // 따라서 delete 연산자로 address 프로퍼티를 삭제할 수 없다. 이때 에러가 발생하지 않는다
     delete person.address
 
-    console.log(person)
+    console.log('delete :',person) // delete : {name: "jaeyoung"}
 }
 
 
@@ -590,7 +582,6 @@ console.clear()
 
 // 10.9.2 계산된 프로퍼티 이름
 {
-    // 문자열 또는 문자열로 타입 변환할 수 있는 값으로 평가되는 표현식을 사용해
 
     // ES5
 
@@ -617,7 +608,7 @@ console.clear()
         [`${prefix}-${++i}`]: i,
         [`${prefix}-${++i}`]: i
     }
-    console.log(obj)
+    console.log(obj) // {prop-1: 1, prop-2: 2, prop-3: 3}
 }
 
 //10.9.3 메서드 축약 표현
@@ -679,12 +670,12 @@ console.clear()
 // 11.1.2 문자열과 불변성
 
 {
-    var str1 = ''; // 0개의 문자로 이뤄진 문자열
-    var str2 = "Hello"; // 5개의 문자로 이뤄진 문자열
+    let str1 = ''; // 0개의 문자로 이뤄진 문자열
+    let str2 = "Hello"; // 5개의 문자로 이뤄진 문자열
 }
 
 {
-    var str = 'Hello'
+    let str = 'Hello'
     str = 'world'
 
     // 첫 번째 문이 실행되면 문자열 'Hello'가 생성되고 식별자 str은 문자열 'Hello'가 저장된
@@ -697,13 +688,13 @@ console.clear()
 
 // 유사 배열 객체
 {
-    var str = 'string'
+    let str = 'string'
     console.log(str[0]); // s
     console.log(str.length); // 6
     console.log(str.toUpperCase()) // STRING
 }
 {
-    var str = 'string'
+    let str = 'string'
     str[0] = 'S'
     console.log(str)
 
@@ -713,23 +704,23 @@ console.clear()
 
 //11.1.3 값에 의한 전달
 {
-    var score = 80;
-    var copy = score;
+    let score = 80;
+    let copy = score;
     console.log(score)
     console.log(copy)
 
     score = 100
     console.log(score)
     console.log(copy)// ?
-    // 이 질문의 핵심은 '변수에 변스를 할당했을 때 무엇이 어떻게 전달되는가?
+    // 이 질문의 핵심은 '변수에 변수를 할당했을 때 무엇이 어떻게 전달되는가?
     // 이처럼 변수에 원시 값을 갖는 변수를 할당하면 할당받는 변수(copy)에는
     // 할당되는 변수(score)의 원시 값이 복사되어 전달된다
     // 이를 값에 의한 전달 이라고 한다.
 }
 
 {
-    var score = 80
-    var copy = score
+    let score = 80
+    let copy = score
     console.log(score,copy) // 80 80
     console.log(score === copy) // true
 
@@ -799,11 +790,11 @@ console.clear()
 
 // 11.2.2 참조에 의한 전달
 {
-    var person = {
+    let person = {
         name : "lee"
     }
 
-    var copy = person
+    let copy = person
     console.log(copy)
     
     // 객체를 가리키는 변수를 다른 변수에 할당하면 원본의 참조 값이 복사되어 전달된다
@@ -963,7 +954,7 @@ console.clear()
 // 함수는 일급 객체이므로 함수 리터럴로 생성한 함수 객체를 변수에 할당할 수 있다.
 
 {
-    var add = function(x,y){
+    var add = function foo(x,y){
         return x + y;
     }
     console.log(add(2,5))
@@ -983,12 +974,11 @@ console.clear()
 
 {
     // 함수 참조
-    console.dir(add1)
+    console.dir('sub',sub)
     // console.dir(sub1) // undefined
 
     // 함수 호출
-    console.log(add1(2,5))
-    // console.log(sub1(2,5)) Uncaught ReferenceError: sub1 is not defined
+    console.log('add 1 ',add1(2,5)) // add 1 7
 
     // 함수 선언문
     function add1(x,y){
@@ -1348,7 +1338,7 @@ console.clear()
     console.log('map :',res); //map : (3) [2, 4, 6]
 
     res = [1, 2, 3].filter(function(item){
-       return item % 2
+    return item % 2
     })
     console.log('filter :' ,res) // filter : (2) [1, 3]
 
@@ -1398,3 +1388,14 @@ console.log(count) // 2
 // 함수형 프로그래밍은 결국 순수 함수를 통해 부수 효과를 최대한 억제해 오류를 피하고 프로그램의
 // 안정성을 높이려는 노력의 일환이라 할 수 있다. 자바스크립트는 멀티 패러다임 언어이므로 객체지향
 // 프로그래밍뿐만 아니라 함수형 프로그래밍을 적극적으로 활용하고 있다.
+
+console.clear()
+
+var res =(function(){
+    var a = 5;
+    var b = 3;
+    return a * b
+}())
+
+
+
