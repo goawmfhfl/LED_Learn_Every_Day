@@ -4,50 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamcoding</title>
+    <title> Window size </title>
     <style>
-        .window_size_box{
-            width: 15rem;
-            height: 15rem;
+        .tag{
+            display: inline-block;
             background-color: beige;
-            display: flex;
-            flex-direction: column;
-        }
-        .window_size_box > div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .window_size_box > div > h3{
-            margin-right: 0.5rem;
+            padding: 16px;
+            margin: 16px;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="window_size_box">
-        <div class="window_screen"> window_screen:
-            <h3 class="screenheight"></h3>
-            <h3 class="screenwidth"></h3>
-        </div>
-    <div class="window_outer"> window_outer:
-        <h3 class="outerheight"></h3>
-        <h3 class="outerwidth"></h3>
-    </div>    
-    <div class="window_inner"> window_inner:
-        <h3 class="inneheight"></h3>
-        <h3 class="innerWidth"></h3>
-    </div>
-    <div class="clientWidth"></div>
-        <h3 class="client_width"></h3>
-    </div>
+    <div class="tag">Winow Size</div> 
     <script>
-        const $ScreenHeight = document.querySelector('.screenheight').innerHTML = window.screen.height
-        const $ScreenWidth = document.querySelector('.screenwidth').innerHTML = window.screen.width
-        const $OuterHeight = document.querySelector('.outerheight').innerHTML = window.outerHeight
-        const $OuterWidth = document.querySelector('.outerwidth').innerHTML = window.outerHeight
-        const $inneheight = document.querySelector('.inneheight').innerHTML = window.innerWidth
-        const $innerwidth = document.querySelector('.innerWidth').innerHTML = window.innerWidth
         
+        const tag = document.querySelector('.tag')
+
+        function UpdateTag(){
+            tag.innerHTML = `
+            window.screen: ${window.screen.width}, ${window.screen.height}<br/>
+            window.outer: ${window.outerWidth}, ${window.outerHeight}<br/>
+            window.inner: ${window.innerWidth}, ${window.innerHeight}<br/>
+            documentElement.clienWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight} 
+            `
+        }
+        window.addEventListener('resize',() => {
+            UpdateTag()
+        })
+
+        UpdateTag()
+
     </script>
 </body>
 </html>
