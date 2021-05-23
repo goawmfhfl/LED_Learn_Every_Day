@@ -128,28 +128,6 @@ fetchUser()
     }
 
 }
-
-/* pending */ 
-// promise 글에다가 추가하도록하자.
-
-{
-    function fetchUser(){
-        return new Promise((resolve,reject) =>{
-        // do network request in 10 secs...
-        resolve('herman'); // Promise {<fulfilled>: "herman"}
-        //reject(new Error('Error')); // async.await.js:123 Uncaught (in promise) Error: Error
-        })
-    }
-    const user = fetchUser();
-    user.then(user => console.log(user)); // herman
-    console.log(user); // Promise {<fulfilled>: "herman"}
-
-    // resolve,reject를 실행블럭에서 찾을수 없으면 Promise {<pending>} 상태를 반환함
-    // resolve,reject를 활용해서 완료해줘야함
-}
-
-
-
 // 3. useFul Promise APIs
 
 /* 과일 구하기 */
