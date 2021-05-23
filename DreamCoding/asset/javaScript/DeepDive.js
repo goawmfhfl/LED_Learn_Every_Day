@@ -1391,11 +1391,27 @@ console.log(count) // 2
 
 console.clear()
 
-var res =(function(){
-    var a = 5;
-    var b = 3;
-    return a * b
-}())
+
+
+
+
+// 2번 값에 의한 전달
+
+
+
+    
+
+
+// 3번 객체 변경 가능한 값
+
+
+
+
+// 4번 함수 호이스팅
+
+
+
+
 
 
 
