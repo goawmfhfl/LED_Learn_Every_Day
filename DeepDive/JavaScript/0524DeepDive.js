@@ -198,3 +198,6 @@ console.log('5월 24일 공부 기록입니다')
 // 프로퍼티의 재정의 가능 여부 configurable: true, // 프로퍼티 삭제, 어트리뷰트 값 변경 금지.
 
 
+console.clear()
+
+
