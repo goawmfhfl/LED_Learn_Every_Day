@@ -236,8 +236,7 @@ console.log('5월 24일 공부 기록입니다')
     const user1 = new User('steve','Job', 20);
     console.log(user1.age) // 0 호출
 }
-//age라는 getter를 정의하면 기존에 설정했던 this.age = age;는 메모리에 있는 데이터를 불러오는 게 아니라 바로 get age()를 호출한다. 기존에 선언되어 있던 this.age = age는 무시가 된다. 
-// 그리고 세터를 정의하는 순간 this.age = age 우변을 호출할 때, 즉 값으로 할당할 때 메모리 값을 할당하는 게 아니라 세터를 호출하게 된다. 그 말은 set age(value){ this.age = value; } 세터 안에서 전달된 value를 this.age에 할당할 때 메모리 값을 업데이트하는 것이 아니라 세터를 호출한다.
+
 
 
 {
@@ -273,7 +272,7 @@ console.log('5월 24일 공부 기록입니다')
 
 // 16.4 프로퍼티 정의
 // 프로퍼티 정의란 새로운 프로퍼티를 추가하면서 프로퍼티 어트리뷰트를 명시적으로 정의하거나,
-// 기저ㅗㄴ 프로퍼티의 프로퍼티 어트리뷰트를 재정의하는 것을 말한다.
+// 기존 프로퍼티의 프로퍼티 어트리뷰트를 재정의하는 것을 말한다.
 
 // object.defineProperty(person)
 // 한번에 하나만 정의할 수 있음
@@ -289,8 +288,7 @@ console.log('5월 24일 공부 기록입니다')
  */
 
 
-// 자바스크립트는 객체의 변경을 방지하는 다양한 메서드를 제공한다
-// 객체 변경 방지 메서드들은 객체의 변경을 금지하는 강도가 다르다.
+
 
 // 16.5.1 // 객체 확장 금지.
 // 객체 확장 금지란 프로퍼티 추가 금지를 의미한다
@@ -314,22 +312,27 @@ console.log('5월 24일 공부 기록입니다')
 
 // 16.5.2 // 객체 밀봉
 // 프로퍼티 추가 및 사제와 프로퍼티 어트리뷰트 재정의 금지를 의미한다
-// 밀봉된 객체는 읽기와 쓰기만 가능하다
+// 밀봉된 객체는 읽기와 쓰기(값 갱신)
 
 {
     const person = {
         name : 'choi'
     }
     console.log(Object.isSealed(person)); // false
-    Object.seal(person); // ?? 
+    Object.seal(person); 
     console.log(Object.isSealed(person)) // true
+
     person.age = 20
+
     delete person.name;
-    // 값 갱신은 가능하다.
+
     person.name = 'kim';
-    console.log(person)
+
+    console.log(person) // {name: "kim"}
+    // 값 갱신은 가능하다.
+
     // 재 정의가 불가하다.
-    // Object.defineProperty(person, 'name', {configurable:true})
+    // Object.defineProperty(person, 'name', { configurable:true })
     // Cannot redefine property: name 
 }
 
@@ -391,3 +394,20 @@ console.log('5월 24일 공부 기록입니다')
     console.log(person);
     // 어렵다.
 }
+
+
+console.clear()
+
+const team = {
+    application : 'notion'
+}
+console.log(Object.isExtensible(team)) // true
+// 객체 확장 금지
+Object.preventExtensions(team);
+
+console.log(Object.isExtensible(team)) // false
+
+team.study = 'javaScript';
+console.log(team) // 1번 ??
+
+Object.defineProperty(team,'study',{study : 'React'}) // 2번 ??
