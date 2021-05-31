@@ -43,6 +43,6 @@ function pickup(board, index){
             newBoard[i][index] = 0;
             return doll;
         }
-    }
+    } 
 }
 
