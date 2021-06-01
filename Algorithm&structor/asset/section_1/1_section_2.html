@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(a, b, c){
+            let answer = "Yes"
+            let max
+            let sum = a + b + c;
+            // max 값을 구하는 이유는 나머지 작은 2개의 막대 값과 비교해야하기 때문이다
+            if(a > b) max = a
+            else max = b
+            // a가 크다면 max = a
+            // b가 크다면 max = b
+            if (c > max) max = c
+            // 만약 c가 a b 보다 크다면 max = c
+            if((sum - max) <= max) answer = "No"
+            // 만약 전체의 길이에서 - 가장 큰 길이를 뺸 값 즉, 나머지 두개의 막대의 길이가
+            // max보다 작거나 같다면 answer = "No"
+            return answer
+        }
+
+        // No 상황 만들기
+        console.log(solution(10, 2, 6)) // No
+        // Yes 상황 만들기 
+        console.log(solution(20,15,17)) // Yes
+    </script>
+</body>
+</html>
+
+<!-- 
+    리마인딩 해보자 삼각형이 만들어지기 위한 조건으로는
+    가장 큰 막대의 길이를 제외한 두 개의 막대의 길이보다는 가장 큰 막대보다
+    작아야하며 동일해서도 안된다
+    
+
+
+-->
