@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    function solution(n){
+        let answer = Math.ceil(n/12)
+        return answer
+    }
+    console.log(solution(53));
+</script>
+</html>
+
+<!--
+
+2.123123
+소수점이 조금이라도 있으면 올려버리는 것을
+그냥 자리를 올려버린다. 즉 3으로 올려버림.
+ceil
+이런 코드가 있다는 가정을 해보자 그럼 바로 3으로 올려버린다.
+
+소수점이 조금이라도 있으면 올려버리는 것은 무엇일까?
+let answer = Math.ceil(2.111); 
+console.log(answer); // 3
+
+소수점이 조금이라도 있으면 내려버리는 것은 무엇일까?
+let answer = Math.floor(2.111); // 2
+console.log(answer); // 2
+
+반올림 하는 것은 무엇일까 ?
+let answer = Math.round(2.4);// 2
+console.log(answer); // 2
+let answer = Math.round(2.5);// 3
+console.log(answer); // 3
+
+제곱근을 알려주는 것은 무엇일까?
+let answer = Math.sqrt(16);
+console.log(answer); //4
+
+
+Math에 대한 이해가 필요한 부분이다. 
+** Math에 대한 메서드 한번 MDN에서 참고를 해봐라.
+// 한번 코드 구현해보고 참고해보는ㄱ ㅓㄹ로 하자
+-->
