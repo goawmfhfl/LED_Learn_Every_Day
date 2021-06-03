@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+    function Person (name,first,second,third){
+    this.name=name,
+    this.first = first,
+    this.second= second,
+    this.third= third
+    }
+    Person.prototype.sum = function(){
+        return 'prototype :' + (this.first + this.second)
+    }
+    let choi = new Person('kim',10,20,30);
+    let kim = new Person('choi',10,10,10);
+    kim.sum = function(){
+        return 'this :' + (this.first + this.second)
+    }
+    console.log(choi.sum());
+    console.log(kim.sum());
+
+    </script>
+</body>
+</html>
