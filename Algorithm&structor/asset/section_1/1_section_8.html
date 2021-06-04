@@ -10,30 +10,22 @@
 <script>
     function solution(arr){
         let answer = arr;
-        let sum = arr.reduce((a,b) => a+b, 0);
+        let sum = arr.reduce((a,b) => a+b, 0)
 
-        for(let i = 0; i < 8; i++){
-            for(let j = i+1; j < 9; j++){
-                if((sum-(arr[i]+arr[j])) === 100){
-                    arr.splice(j, 1)
-                    arr.splice(i, 1)
+        for(let i=0; i < 7; i++){
+            for(let j = i+1; j < 8; j++){
+                if((sum - (arr[i] + arr[j])) === 100){
+                    arr.splice(j,1)
+                    arr.splice(i,1)
                 }
             }
         }
         return answer;
     }
-    let arr =[20, 7, 23, 19, 10, 15, 25, 8, 13];
-    console.log(solution(arr))
+    let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+    console.log(solution(arr));
+
+
 </script>    
 </body>
 </html>
-
-<!--
-
-    전체적인 합에서 가짜난쟁이 2명의 값을 빼면 숫자 100이 되는 상황을 만들어야한다
-    
-    reduce
-
-
-
--->

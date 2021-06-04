@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scdale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href=""></a>
+    <script>
+        let superObj = { superVal:'super'};
+        // let subObj = { subVal:'sub'};
+        // subObj.__proto__ = superObj;
+        let subObj = Object.create(superObj);
+        subObj.subVal = 'sub'
+        console.log(subObj.subVal);
+
+        console.log('subObj.subVal =>',subObj.subVal);
+        console.log('subObj.superVal =>',subObj.superVal);
+
+        subObj.superVal = 'sub';
+        console.log('superObj.superVal =>',superObj.superVal); 
+
+        let kim = {
+            name:'kim',
+            first:10, second:20,
+            sum:function(){return this.first+this.second}
+        }
+        
+        let lee = Object.create(kim);
+        lee.name = 'lee';
+        lee.first = 10;
+        lee.second = 10;
+        lee.avg = function(){
+            return (this.first + this.second)/2;
+        }
+
+        // let lee = {
+        //     name: 'lee',
+        //     first:10, second:10,
+        //     avg:function(){
+        //         return(this.first+this.second)/2;
+        //     }
+        // }
+        // lee.__proto__= kim;
+        console.log(kim);
+        //{name: "kim", first: 10, second: 20, sum: ƒ}
+        console.log(kim.sum()); // 30
+        console.log(lee.sum()); // 20
+        console.log(lee.avg());// 10
+    </script>
+</body>
+</html>

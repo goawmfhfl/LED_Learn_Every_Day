@@ -19,13 +19,23 @@
             }
             }
 
-        let kim = new Person('kim',10,20);
-        let choi = new Person('choi',20,30)
-        kim.sum = function(){
-            return 'this :' +(this.first + this.second)
+        class PersonPlus{
+            constructor(name,first,second){
+                this.name = name;
+                this.first = first;
+                this.second = second;
+            }
+            sum(){
+                return this.first + this.second;            
+            }
+            avg(){
+                return (this.first + this.second)/2;
+            }
         }
-        console.log(choi.sum());
+
+        let kim = new PersonPlus('kim',10,20);
         console.log(kim.sum());
+        console.log(kim.avg());
     </script>
 </body>
 </html>

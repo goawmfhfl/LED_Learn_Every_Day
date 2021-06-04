@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,first,second){
+                this.name = name;
+                this.first = first;
+                this.second = second;
+            }
+            sum(){
+                return this.first + this.second;            
+            }
+            }
+
+        class PersonPlus extends Person{
+                avg(){
+                    return (this.first + this.second)/2;
+                }
+    }
+
+        let kim = new PersonPlus('kim',10,20);
+        console.log(kim.sum());
+        console.log(kim.avg());
+    </script>
+</body>
+</html>
