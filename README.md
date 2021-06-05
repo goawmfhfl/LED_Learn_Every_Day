@@ -1,4 +1,4 @@
-## LED_Learn_Every_Day
+## TIL 🧑🏻‍💻Today _ I _ Learn
 ✏️  **매일매일 성장하는 기록을 담은 레파지토리 입니다.**
 
 --------
@@ -9,7 +9,8 @@
 ---
 ## **Javascript**
 >## Dream Coding Ellie
-</br>
+<br>
+
 <div align="left"><img src="Dream_Academy/asset/자바스크립트.png" width="700px" height="450px" alt="dreamcoding"></img></div>
 
 - [드림코딩 학습 노트 1 - 변수 , 데이터타입](https://blog.naver.com/goawmfhfl1/222337915001)
@@ -29,6 +30,11 @@
 >## 생활코딩
 </br>
 <div align="left"><img src="https://t1.daumcdn.net/cfile/tistory/253BF74B52E0F4EE1C" width="700px" height="450px" alt="dreamcoding"></img></div>
+<br>
+
+- [객체지향 프로그래밍 - why we need prototype?](https://blog.naver.com/goawmfhfl1/222385620281)
+
+---
 </br>
 
 >## JavaScript Study
