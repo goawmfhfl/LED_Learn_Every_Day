@@ -41,6 +41,9 @@
 </br>
 <a href = "https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/J_Study.png" width="750px" height="450px" alt="dreamcoding"></img></div></a>
 
+- [자바스크립트 첼린지 5월 3주차 학습 피드백](https://www.notion.so/5-3-eb1112cbb83843f194f833ab3d6ca857)
+- [자바스크립트 첼린지 6월 1주차 학습 피드백](https://www.notion.so/6-1-a2a1d5fda8cb493a8ae37768e7180973)
+- [자바스크립트 첼린지 6월 2주차 학습 피드백](test.md)
 ---
 ## **Algorithm**
 >## 매일 매일 2문제씩 풀기!
@@ -59,3 +62,5 @@
 >## Study
 <br>
 <a href="https://www.notion.so/Algorithm-Challenge-ca82d86996c94a1287ba7c6ce45388da"><div align="left"><img src="Algorithm&structor/asset/img/A_Study.png" width="750px" height="450px" alt="dreamcoding"></img></div><a>
+
+- [알고리즘 스터디 6월 1주차](https://www.notion.so/8a0a25191e8c4bd68fbd3124a0c6171a)
