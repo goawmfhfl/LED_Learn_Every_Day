@@ -35,6 +35,7 @@
 - [객체지향 프로그래밍 - why we need prototype?](https://blog.naver.com/goawmfhfl1/222385620281)
 - [객체지향 프로그래밍 - Class inheritance](https://blog.naver.com/goawmfhfl1/222385647653)
 - [객체지향 프로그래밍 - Class 상속 super !](https://blog.naver.com/goawmfhfl1/222385666271)
+- [객체지향 프로그래밍 - 객체 상속 Object.prototype vs __proto__](https://blog.naver.com/goawmfhfl1/222385753028)
 
 ---
 </br>
