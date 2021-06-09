@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(s){
+            let answer = 0;
+            let pos=s.indexOf('k');
+            while(pos !== -1){
+                answer++
+                pos=s.indexOf('k', pos+1);
+            }
+            return answer;
+        }
+        console.log(solution("ksekkset"));
+    </script>
+</body>
+</html>
