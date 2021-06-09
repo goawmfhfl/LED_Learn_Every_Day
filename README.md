@@ -13,6 +13,8 @@
 
 <div align="left"><img src="Dream_Academy/asset/자바스크립트.png" width="700px" height="450px" alt="dreamcoding"></img></div>
 
+<br>
+
 - [드림코딩 학습 노트 1 - 변수 , 데이터타입](https://blog.naver.com/goawmfhfl1/222337915001)
 - [드림코딩 학습 노트 2 - 연산자 (operate, if, for loof)](https://blog.naver.com/goawmfhfl1/222340080322)
 - [드림코딩 학습 노트 3 - 함수 선언](https://blog.naver.com/goawmfhfl1/222341108210)
@@ -35,19 +37,22 @@
 - [객체지향 프로그래밍 - why we need prototype?](https://blog.naver.com/goawmfhfl1/222385620281)
 - [객체지향 프로그래밍 - Class inheritance](https://blog.naver.com/goawmfhfl1/222385647653)
 - [객체지향 프로그래밍 - Class 상속 super !](https://blog.naver.com/goawmfhfl1/222385666271)
-- [객체지향 프로그래밍 - 객체 상속 Object.prototype vs __proto__](https://blog.naver.com/goawmfhfl1/222385753028)
+- [객체지향 프로그래밍 - 객체 상속 Object.prototype vs __ proto __](https://blog.naver.com/goawmfhfl1/222385753028)
 
 ---
 </br>
 
 >## JavaScript Study
 </br>
-<a href = "https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/J_Study.png" width="750px" height="450px" alt="dreamcoding"></img></div></a>
+<a href = "https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/Study.png" width="750px" height="450px" alt="dreamcoding"></img></div></a>
+<br>
 
 - [Mark Down 공유 test](test.md)
 - [자바스크립트 첼린지 5월 3주차 학습 피드백](https://www.notion.so/5-3-eb1112cbb83843f194f833ab3d6ca857)
 - [자바스크립트 첼린지 6월 1주차 학습 피드백](https://www.notion.so/6-1-a2a1d5fda8cb493a8ae37768e7180973)
 ---
+<br>
+
 ## **Algorithm**
 >## 매일 매일 2문제씩 풀기!
 <br>
@@ -64,6 +69,7 @@
 
 >## Study
 <br>
-<a href="https://www.notion.so/Algorithm-Challenge-ca82d86996c94a1287ba7c6ce45388da"><div align="left"><img src="Algorithm&structor/asset/img/A_Study.png" width="750px" height="450px" alt="dreamcoding"></img></div><a>
+<a href="https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/Study.png" width="750px" height="450px" alt="dreamcoding"></img></div><a>
+<br>
 
 - [알고리즘 스터디 6월 1주차](https://www.notion.so/8a0a25191e8c4bd68fbd3124a0c6171a)
