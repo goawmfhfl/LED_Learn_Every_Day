@@ -19,10 +19,9 @@
                     sum2+=arr[j][i];
                 }
                 answer = Math.max(answer,sum1,sum2);
-                console.log('ji',answer);
             }
             sum1 = sum2 = 0;
-            for(let i=0; i<n; i++){
+            for(let i=0; i<n; i++){ 
                 sum1 += arr[i][i];
                 sum2 += arr[i][n-i-1];
             }
@@ -30,7 +29,6 @@
             console.log('i',answer);
             return answer;
         }
-
         let str =[
             [10, 13, 10, 12, 15],
             [12, 39, 30, 23, 11],

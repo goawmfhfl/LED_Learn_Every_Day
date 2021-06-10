@@ -64,6 +64,8 @@
 - [알고리즘 문제2 - 연필 개수, 1부터 N까지의 합](https://blog.naver.com/goawmfhfl1/222381099270)
 - [알고리즘 문제3 - 최솟값 구하기, 홀수](https://blog.naver.com/goawmfhfl1/222382951813)
 - [알고리즘 문제4 - 10부제, 일곱난장이](https://blog.naver.com/goawmfhfl1/222384811095)
+- [알고리즘 문제5 - A를 #으로, 문자 찾기](https://blog.naver.com/goawmfhfl1/222387355165)
+- [알고리즘 문제5 - 대소문자로 변환, 보이는 학생 수](https://blog.naver.com/goawmfhfl1/222391375828)
 ---
 <br>
 
