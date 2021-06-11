@@ -70,7 +70,7 @@
 <br>
 
 >## Study
-<br>
+<br>    
 <a href="https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/Study.png" width="750px" height="450px" alt="dreamcoding"></img></div><a>
 <br>
 

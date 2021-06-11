@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(arr){
+            let answer = "YES"
+            arr = arr.toLowerCase();
+            let len = arr.length;
+            for(let i=0; i<Math.floor(len/2); i++){
+                if(arr[i] !== arr[len-i-1]) return "No";
+            }
+            return answer;
+        }
+        let str ="goOg"
+        console.log(solution(str));
+    </script>
+    <script>
+        {
+            function solution(arr){
+            let answer = "YES"
+            arr = arr.toLowerCase();
+            if(arr.split('').reverse().join('')!==arr) return "No"
+            return answer;
+        }
+        let str ="gooG"
+        console.log(solution(str));
+
+        }
+    </script>
+</body>
+</html>
