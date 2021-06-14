@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(arr){
+            let answer = 0;
+
+            for(let x of arr){
+                if(!isNaN(x)) answer = answer*10+Number(x);
+            }
+            return parseInt(answer);
+        }
+
+        let arr = "g0e00n22T0s8eSoft"
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
