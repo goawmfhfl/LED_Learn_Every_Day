@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(phone_book) {
+            const hashMap = {}
+
+            for(let phoneNumber of phone_book){
+                hashMap[phoneNumber] = 1
+            }
+            for(let phoneNumber of phone_book){
+                let temp = "";
+                const phoneNumberWithoutSpace = phoneNumber.replace(/\s/g,"");
+
+                for(let number of phoneNumberWithoutSpace){
+                    temp += number
+                    if(hashMap[temp] && temp != phoneNumberWithoutSpace){
+                        return false
+                    }
+                }
+            }
+            return true
+}
+
+let phone_book = ["123","1234","789"];
+console.log(solution(phone_book));
+    </script>
+</body>
+</html>

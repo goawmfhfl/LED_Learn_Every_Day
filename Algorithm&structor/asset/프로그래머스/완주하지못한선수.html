@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(participant, completion) {
+    console.log('sort:',participant.sort());
+    console.log('sort :',completion.sort());
+    for(let i in participant) {
+        if(participant[i] !== completion[i]) return participant[i];
+    }
+}
+
+let participant = ["leo","kiki","eden"];
+let completion = ["eden","kiki"];
+console.log(solution(participant,completion));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(clothes){
+            let answer = 1;
+            let sorts = {};
+
+            for(let cloth of clothes){
+                if(sorts[cloth[1]]){
+                    sorts[cloth[1]]++
+                }else{
+                    sorts[cloth[1]] = 1; 
+                }
+            }
+            for(let i of Object.keys(sorts)){
+                answer *= sorts[i] + 1
+                // answer = 1 * 1 + 1 
+                // answer = 2 * 2 + 1 
+                // answer = 6
+            }
+            return answer -1;
+        }
+        let clothes = [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]]
+        console.log(solution(clothes));
+    </script>
+</body>
+</html>
