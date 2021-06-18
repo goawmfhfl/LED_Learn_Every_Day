@@ -65,7 +65,13 @@
 - [알고리즘 문제3 - 최솟값 구하기, 홀수](https://blog.naver.com/goawmfhfl1/222382951813)
 - [알고리즘 문제4 - 10부제, 일곱난장이](https://blog.naver.com/goawmfhfl1/222384811095)
 - [알고리즘 문제5 - A를 #으로, 문자 찾기](https://blog.naver.com/goawmfhfl1/222387355165)
-- [알고리즘 문제5 - 대소문자로 변환, 보이는 학생 수](https://blog.naver.com/goawmfhfl1/222391375828)
+- [알고리즘 문제6 - 대소문자로 변환, 보이는 학생 수](https://blog.naver.com/goawmfhfl1/222391375828)
+- [알고리즘 문제7 - 가위바위보, 점수 계산](https://blog.naver.com/goawmfhfl1/222394121528)
+- [알고리즘 문제8 - 등수구하기, 격자판 최대합](https://blog.naver.com/goawmfhfl1/222394175969)
+- [알고리즘 문제9 - 봉우리, 유효한 팰린드롬](https://blog.naver.com/goawmfhfl1/222399308976)
+- [알고리즘 문제10 - 가장 짧은 문자 거리, 자릿수의 합](https://blog.naver.com/goawmfhfl1/222399350253)
+- [알고리즘 문제11 - 졸업선물](https://blog.naver.com/goawmfhfl1/222401525528)
+- [알고리즘 문제12 - 두 배열 합치기](https://blog.naver.com/goawmfhfl1/222401536100)
 ---
 <br>
 
