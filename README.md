@@ -72,6 +72,9 @@
 - [알고리즘 문제10 - 가장 짧은 문자 거리, 자릿수의 합](https://blog.naver.com/goawmfhfl1/222399350253)
 - [알고리즘 문제11 - 졸업선물](https://blog.naver.com/goawmfhfl1/222401525528)
 - [알고리즘 문제12 - 두 배열 합치기](https://blog.naver.com/goawmfhfl1/222401536100)
+- [알고리즘 문제13 - 공통원소 구하기](https://blog.naver.com/goawmfhfl1/222405458619)
+- [알고리즘 문제14 - 최대매출](https://blog.naver.com/goawmfhfl1/222406735436)
+- [알고리즘 문제14 - 학급 회장](https://blog.naver.com/goawmfhfl1/222408948930)
 ---
 <br>
 
