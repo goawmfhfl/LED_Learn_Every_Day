@@ -9,11 +9,12 @@
 <body>
     <script>
 
-if('') console.log('1');
-if(true) console.log('2');
-if(0) console.log('3');
-if('str') console.log('4');
-if(null) console.log('5');
+function getStringLength(str){
+    str = str || '';
+    return str.length;
+}
+console.log(getStringLength()); 
+console.log(getStringLength('hi')); 
 
     </script>
 </body>

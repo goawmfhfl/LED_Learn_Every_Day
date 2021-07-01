@@ -8,12 +8,34 @@
 </head>
 <body>
     <script>
-        function solution(){
-            let answer;
+        function solution(times,number){
+            let make = number.charCodeAt()
+            console.log(make);
+            let answer=Number.MIN_SAFE_INTEGER;
+            let T_line=[];
+
+            // T_line push하기
+            for(let x of times){
+                T_line.push([x[0],'s']);
+                T_line.push([x[1],'e']);
+            }
+            // 정렬해주기
+            T_line.sort((a,b)=>{
+                if(a[0]===b[0]) return a[1].charCodeAt()-b[1].charCodeAt(); // 아스키코드 'e'가 순서상 먼저이다.
+                else return a[0]-b[0];
+            });
+
+            // cnt변수의 최대 값 구하기.
+            let cnt=0;
+            for(let x of T_line){
+                if(x[1]==='s') cnt++;
+                else cnt--;
+                answer=Math.max(answer,cnt);
+            }
             return answer;
         }
-        let a = []
-        console.log(solution());
+        let arr = [[14,18],[12,15],[15,20],[20,30],[5,14]];
+        console.log(solution(arr,'e'));
     </script>
 </body>
 </html>
