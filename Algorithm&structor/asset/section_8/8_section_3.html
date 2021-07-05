@@ -13,9 +13,9 @@
             function DFS(v){
                 if(v>7) return // 7까지만 돌기 위해서임.
                 else{
-                    console.log(v);
                     DFS(v*2);
                     DFS(v*2+1)
+                    console.log(v);
                 }
             }
         DFS(v);
