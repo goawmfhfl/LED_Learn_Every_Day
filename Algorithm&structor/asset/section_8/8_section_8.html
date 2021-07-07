@@ -8,13 +8,23 @@
 </head>
 <body>
     <script>
-        function solution(){
-            let answer;
-            return answer;
-        }
-
-        let arr = [];
-        console.log(solution());
+        function solution(n,m){
+            let answer=[];
+            let tmp=Array.from({length:m},()=>0);
+            function DFS(L){
+                if(L===m){
+                    answer.push(tmp.slice()) // 같은곳의 주소를 넣은 것이다.
+                }else{
+                    for(let i=1; i<=n; i++){
+                        tmp[L]=i;
+                        DFS(L+1);
+                    }
+                    }
+                }
+                DFS(0);
+                return answer;
+            }
+        console.log(solution(3,2));
     </script>
 </body>
 </html>
