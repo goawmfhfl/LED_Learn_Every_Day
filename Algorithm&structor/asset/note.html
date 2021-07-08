@@ -8,7 +8,22 @@
 </head>
 <body>
     <script>
-console.log(String(0123)); // "83"
+        function changeVal(primitive,obj){
+            primitive +=100;
+            obj.name = 'kim'
+            console.log(primitive); // ?
+        }
+
+        var num = 100;
+        var person = {name: 'jaeyoung'};
+
+        console.log(num); // ?
+        console.log(person); // ?
+
+        console.log(changeVal(num,person));
+
+        console.log(num); // ?
+        console.log(person); // ?
     </script>
 </body>
 </html>
