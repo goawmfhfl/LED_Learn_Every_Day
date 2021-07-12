@@ -8,7 +8,33 @@
 </head>
 <body>
     <script>
-        
+let counter = 0;
+
+function incrementCounter() {
+  counter++;
+}
+
+function changeCounter(x) {
+  counter = x;
+}
+
+function square(x) {
+  changeCounter(-12);
+  return x * x;
+}
+
+function myFun() {
+  incrementCounter(); // 
+  incrementCounter();  //
+  incrementCounter(); // 3
+  square(10); // -12
+  incrementCounter(); // -11
+  console.log(counter); // ?
+}
+
+myFun();
+console.log(counter);
+
     </script>
 </body>
 </html>
