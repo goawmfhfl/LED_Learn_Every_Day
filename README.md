@@ -48,8 +48,22 @@
 <br>
 
 - [Mark Down 공유 test](test.md)
-- [자바스크립트 첼린지 5월 3주차 학습 피드백](https://www.notion.so/5-3-eb1112cbb83843f194f833ab3d6ca857)
-- [자바스크립트 첼린지 6월 1주차 학습 피드백](https://www.notion.so/6-1-a2a1d5fda8cb493a8ae37768e7180973)
+
+- [자바스크립트 첼린지 5월 3주차 학습 노트](https://www.notion.so/5-3-cc841ac836574a5a88129445caf83268)
+- [자바스크립트 첼린지 5월 4주차 학습 노트](https://www.notion.so/5-4-3fdafff49e68412382f3c06aab24eb7c)
+- [자바스크립트 첼린지 6월 1주차 학습 노트](https://www.notion.so/adb4d2d9c9a246b4932a4f902eb1ea47)
+- [자바스크립트 첼린지 6월 3주차 학습 노트](https://www.notion.so/6-3-89c9ab51c5634790b1d2a92e803d19f7)
+- [자바스크립트 첼린지 6월 4주차 학습 노트](https://www.notion.so/6-4-990040977dbb4c43aad6db2a6f5c053b)
+- [자바스크립트 첼린지 7월 1주차 학습 노트](https://www.notion.so/7-1-0973da9bdff54f70bd9ce6390549c51f)
+- [자바스크립트 첼린지 7월 2주차 학습 노트](https://www.notion.so/7-2-ebda5539583d49129583ae4969324da7)
+
+
+- [자바스크립트 첼린지 5월 3주차 피드백](https://www.notion.so/5-3-eb1112cbb83843f194f833ab3d6ca857)
+- [자바스크립트 첼린지 6월 1주차 피드백](https://www.notion.so/6-1-a2a1d5fda8cb493a8ae37768e7180973)
+- [자바스크립트 첼린지 6월 3주차 피드백](https://www.notion.so/6-3-5ad44e3da3774ac49f9aec72dd6ccb63)
+- [자바스크립트 첼린지 6월 4주차 피드백](https://www.notion.so/6-4-7fbe279089f64b8fb5b8c953a1b74636)
+- [자바스크립트 첼린지 7월 1주차 피드백](https://www.notion.so/7-1-afdf4815538148639b84beadaef5688e)
+- [자바스크립트 첼린지 7월 2주차 피드백](https://www.notion.so/7-2-c55e31f471824d6f9637b1b972bd3716)
 ---
 <br>
 
@@ -78,9 +92,8 @@
 ---
 <br>
 
->## Study
-<br>    
-<a href="https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/Study.png" width="750px" height="450px" alt="dreamcoding"></img></div><a>
-<br>
 
-- [알고리즘 스터디 6월 1주차](https://www.notion.so/8a0a25191e8c4bd68fbd3124a0c6171a)
+>## Algorithm Study
+</br>
+<a href = "https://www.notion.so/JavaScript-Challenge-d6b9a65deb9d4919aed3d8f7e817f5c7"><div align="left"><img src="Algorithm&structor/asset/img/altong.png" width="750px" height="450px" alt="dreamcoding"></img></div></a>
+<br>
