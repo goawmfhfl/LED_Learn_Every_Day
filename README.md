@@ -48,7 +48,7 @@
 <br>
 
 - [Mark Down 공유 test](test.md)
-
+---
 - [자바스크립트 첼린지 5월 3주차 학습 노트](https://www.notion.so/5-3-cc841ac836574a5a88129445caf83268)
 - [자바스크립트 첼린지 5월 4주차 학습 노트](https://www.notion.so/5-4-3fdafff49e68412382f3c06aab24eb7c)
 - [자바스크립트 첼린지 6월 1주차 학습 노트](https://www.notion.so/adb4d2d9c9a246b4932a4f902eb1ea47)
@@ -56,8 +56,7 @@
 - [자바스크립트 첼린지 6월 4주차 학습 노트](https://www.notion.so/6-4-990040977dbb4c43aad6db2a6f5c053b)
 - [자바스크립트 첼린지 7월 1주차 학습 노트](https://www.notion.so/7-1-0973da9bdff54f70bd9ce6390549c51f)
 - [자바스크립트 첼린지 7월 2주차 학습 노트](https://www.notion.so/7-2-ebda5539583d49129583ae4969324da7)
-
-
+---
 - [자바스크립트 첼린지 5월 3주차 피드백](https://www.notion.so/5-3-eb1112cbb83843f194f833ab3d6ca857)
 - [자바스크립트 첼린지 6월 1주차 피드백](https://www.notion.so/6-1-a2a1d5fda8cb493a8ae37768e7180973)
 - [자바스크립트 첼린지 6월 3주차 피드백](https://www.notion.so/6-3-5ad44e3da3774ac49f9aec72dd6ccb63)
@@ -88,7 +87,17 @@
 - [알고리즘 문제12 - 두 배열 합치기](https://blog.naver.com/goawmfhfl1/222401536100)
 - [알고리즘 문제13 - 공통원소 구하기](https://blog.naver.com/goawmfhfl1/222405458619)
 - [알고리즘 문제14 - 최대매출](https://blog.naver.com/goawmfhfl1/222406735436)
-- [알고리즘 문제15 - 학급 회장](https://blog.naver.com/goawmfhfl1/222408948930)
+- [알고리즘 문제15 - 크레인 인형뽑기](https://blog.naver.com/goawmfhfl1/222411245412)
+- [알고리즘 문제16 - 공주 구하기](https://blog.naver.com/goawmfhfl1/222413282443)
+- [알고리즘 문제17 - 버블 정렬](https://blog.naver.com/goawmfhfl1/222414446476)
+- [알고리즘 문제18 - LRU](https://blog.naver.com/goawmfhfl1/222415602192)
+- [알고리즘 문제19 - 결혼식](https://blog.naver.com/goawmfhfl1/222416575801)
+- [알고리즘 문제20 - 재귀함수](https://blog.naver.com/goawmfhfl1/222417937986)
+- [알고리즘 문제21 - 최대점수 구하기](https://blog.naver.com/goawmfhfl1/222422194359)
+- [알고리즘 문제22 - 순열구하기](https://blog.naver.com/goawmfhfl1/222423527277)
+- [알고리즘 문제23 - 수들의 조합](https://blog.naver.com/goawmfhfl1/222425949364)
+- [알고리즘 문제24 - 경로탐색(인접행렬)](https://blog.naver.com/goawmfhfl1/222429163377)
+- [알고리즘 문제25 - 경로탐색(인접리스트)](https://blog.naver.com/goawmfhfl1/222430252383)
 ---
 <br>
 
