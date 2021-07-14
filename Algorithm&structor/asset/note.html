@@ -8,32 +8,64 @@
 </head>
 <body>
     <script>
-let counter = 0;
+        const person = {};
 
-function incrementCounter() {
-  counter++;
-}
+        // person 객체 , firstName의 key값 즉 어트리뷰트 만들어주기
+        Object.defineProperty(person,'firstName',{
+            value:'jaeyoung',
+            writable: true,
+            enumerable: true,
+            configurable: true,
+        });
+        // person 객체 , lastName의 key값 즉 어트리뷰트 만들어주기
+        Object.defineProperty(person,'lastName',{
+            value:'choi'
+        });
 
-function changeCounter(x) {
-  counter = x;
-}
+        let descriptor = Object.getOwnPropertyDescriptor(person,'firstName');
+        console.log('firstName', descriptor);
+        // firstName {value: "jaeyoung", writable: true, enumerable: true, configurable: true}
 
-function square(x) {
-  changeCounter(-12);
-  return x * x;
-}
+        // value값만 입력하면 나머지 값은 undefined와 false가 기본값으로 정이된다
+        descriptor = Object.getOwnPropertyDescriptor(person,'lastName');
+        console.log('lastName',descriptor);
+        // lastName {value: "choi", writable: false, enumerable: false, configurable: false}
 
-function myFun() {
-  incrementCounter(); // 
-  incrementCounter();  //
-  incrementCounter(); // 3
-  square(10); // -12
-  incrementCounter(); // -11
-  console.log(counter); // ?
-}
+        console.log(Object.keys(person));
 
-myFun();
-console.log(counter);
+        person.lastName ='kim';
+
+        delete person.lastName;
+
+        // Object.defineProperty(person,'lastName',{
+        // enumerable: true
+        // });
+
+        descriptor = Object.getOwnPropertyDescriptor(person,'lastName');
+        console.log('lastName',descriptor);
+
+
+        //접근자 프로퍼티 정의
+
+        Object.defineProperty(person, 'fullName',{
+            // getter
+            get(){
+                return `${this.firstName} ${this.lastName}`
+            },
+            // setter
+            set(name){
+                [this.firstName, this.lastName] = name.split(' ');
+            },
+            enumerable:true,
+            configurable:true
+        })
+        descriptor = Object.getOwnPropertyDescriptor(person,'fullName');
+        console.log('fullName',descriptor);
+        // fullName {enumerable: true, configurable: true, get: ƒ, set: ƒ}
+
+        person.fullName = 'Heegun Lee';
+        console.log(person);
+        // {firstName: "Heegun", lastName: "choi"}
 
     </script>
 </body>
