@@ -8,65 +8,18 @@
 </head>
 <body>
     <script>
-        const person = {};
+        //기명 함수 표현식
 
-        // person 객체 , firstName의 key값 즉 어트리뷰트 만들어주기
-        Object.defineProperty(person,'firstName',{
-            value:'jaeyoung',
-            writable: true,
-            enumerable: true,
-            configurable: true,
-        });
-        // person 객체 , lastName의 key값 즉 어트리뷰트 만들어주기
-        Object.defineProperty(person,'lastName',{
-            value:'choi'
-        });
+        const nameFunc = function foo(){}
+        console.log(nameFunc.name); // foo
 
-        let descriptor = Object.getOwnPropertyDescriptor(person,'firstName');
-        console.log('firstName', descriptor);
-        // firstName {value: "jaeyoung", writable: true, enumerable: true, configurable: true}
+        // 익명 함수 표현식
+        var anonymousFunc = function(){};
+        console.log(anonymousFunc.name); // anonymousFunc
 
-        // value값만 입력하면 나머지 값은 undefined와 false가 기본값으로 정이된다
-        descriptor = Object.getOwnPropertyDescriptor(person,'lastName');
-        console.log('lastName',descriptor);
-        // lastName {value: "choi", writable: false, enumerable: false, configurable: false}
-
-        console.log(Object.keys(person));
-
-        person.lastName ='kim';
-
-        delete person.lastName;
-
-        // Object.defineProperty(person,'lastName',{
-        // enumerable: true
-        // });
-
-        descriptor = Object.getOwnPropertyDescriptor(person,'lastName');
-        console.log('lastName',descriptor);
-
-
-        //접근자 프로퍼티 정의
-
-        Object.defineProperty(person, 'fullName',{
-            // getter
-            get(){
-                return `${this.firstName} ${this.lastName}`
-            },
-            // setter
-            set(name){
-                [this.firstName, this.lastName] = name.split(' ');
-            },
-            enumerable:true,
-            configurable:true
-        })
-        descriptor = Object.getOwnPropertyDescriptor(person,'fullName');
-        console.log('fullName',descriptor);
-        // fullName {enumerable: true, configurable: true, get: ƒ, set: ƒ}
-
-        person.fullName = 'Heegun Lee';
-        console.log(person);
-        // {firstName: "Heegun", lastName: "choi"}
-
+        // 함수 선언문
+        function bar(){}
+        console.log(bar.name); // bar
     </script>
 </body>
 </html>
