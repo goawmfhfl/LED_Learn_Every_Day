@@ -16,7 +16,6 @@
                 for(let j=coin[i]; j<=m; j++){
                     dy[j]=Math.min(dy[j], dy[j-coin[i]]+1);
                 }
-                console.log(dy);
             }
             answer=dy[m];
             return answer;

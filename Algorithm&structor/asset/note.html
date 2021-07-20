@@ -8,18 +8,21 @@
 </head>
 <body>
     <script>
-        //기명 함수 표현식
+function Circle(radius){
+            this.radius = radius;
+        };
+        
+        Circle.prototype.getDiameter = function(){
+            return 2 * this.radius;
+        }
 
-        const nameFunc = function foo(){}
-        console.log(nameFunc.name); // foo
+				// 생성자 함수에 의한 객체 생성 방식
+        const circle1 = new Circle(5)
+        const circle2 = new Circle(10)
+        
+        console.log(circle1.getDiameter());
+        console.log(circle2.getDiameter());
 
-        // 익명 함수 표현식
-        var anonymousFunc = function(){};
-        console.log(anonymousFunc.name); // anonymousFunc
-
-        // 함수 선언문
-        function bar(){}
-        console.log(bar.name); // bar
     </script>
 </body>
 </html>

@@ -8,19 +8,17 @@
 </head>
 <body>
     <script>
-        function solution(a, b, c){
-            let answer;
-            if(a < b) answer = a
-            else answer = b
-            if(c < answer) answer = c
+        function solution(day,arr){
+            let answer=0;
+
+            for(let x of arr){
+                if(x%10 === day)answer++
+            }
             return answer;
         }
-        console.log(solution(1,2,3))
+        let arr = [12,20,54,30,87,91,30];
+        console.log(solution(0,arr));
     </script>
+
 </body>
 </html>
-
-<!-- 
-
-
--->
