@@ -8,6 +8,33 @@
 </head>
 <body>
     <script>
+        function test(number){
+            this.number = number;
+        };
+        
+        test.prototype.AddNumber = function(){
+            return this.number + 100
+        }
+        test.prototype.SubNumber = function(){
+            return this.number - 100
+        }
+        test.prototype.DivNumber = function(){
+            return this.number / 100
+        }
+        test.prototype.MultNumber = function(){
+            return this.number * 100
+        }
+
+        const add = new test(10)
+        const subtract = new test(10)
+        const division = new test(10)
+        const multiply = new test(10)
+
+        console.log(add.AddNumber());
+        console.log(subtract.SubNumber());
+        console.log(division.DivNumber());
+        console.log(multiply.MultNumber());
+        
     </script>
 </body>
 </html>

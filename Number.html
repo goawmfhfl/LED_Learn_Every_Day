@@ -8,16 +8,14 @@
 </head>
 <body>
     <script>
-        function solution(day,arr){
+        function solution(n){
             let answer=0;
-            for(let x of arr){
-                if(x%10 === day)answer++
+            for(let i=1; i<=n; i++){
+                answer+=i
             }
             return answer;
         }
-
-        let arr = [12,20,54,30,87,91,30];
-        console.log(solution(0,arr));
+        console.log(solution(15));
     </script>
 </body>
 </html>
