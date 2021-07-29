@@ -8,33 +8,19 @@
 </head>
 <body>
     <script>
-        function test(number){
-            this.number = number;
-        };
-        
-        test.prototype.AddNumber = function(){
-            return this.number + 100
-        }
-        test.prototype.SubNumber = function(){
-            return this.number - 100
-        }
-        test.prototype.DivNumber = function(){
-            return this.number / 100
-        }
-        test.prototype.MultNumber = function(){
-            return this.number * 100
+    function solution(s){
+        let answer; 
+        let max = Number.MIN_SAFE_INTEGER;
+        for(let x of s){
+            max = Math.max(x.length,max)
+            max = x
+            console.log(max);
+            }
+        return answer;
         }
 
-        const add = new test(10)
-        const subtract = new test(10)
-        const division = new test(10)
-        const multiply = new test(10)
-
-        console.log(add.AddNumber());
-        console.log(subtract.SubNumber());
-        console.log(division.DivNumber());
-        console.log(multiply.MultNumber());
-        
+    let arr = ["teacher","time","student","beautiful","good"]
+    console.log(solution(arr));
     </script>
 </body>
 </html>

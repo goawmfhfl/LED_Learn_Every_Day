@@ -8,16 +8,22 @@
 </head>
 <body>
     <script>
-        function solution(day,arr){
-            let answer=0;
-            for(let x of arr){
-                if(x%10 === day)answer++
-            }
-            return answer;
-        }
+// Object.create = 정적 메서드
+// const obj = Object.create({
+//     name:{name:'jaeyoung'}, 
+//     address:{address:'Seoul'}
+// })
+// console.log(obj.name);
+// console.log(obj.address);
+// console.log(obj);
 
-        let arr = [12,20,54,30,87,91,30];
-        console.log(solution(0,arr));
+//
+// Object.create = 정적 메서드
+const obj = Object.create({ ProtoName: 'Lee' });
+obj.Objname='Lee'
+console.log(obj); // {name: "Lee"}
+console.log(obj.hasOwnProperty('Objname')); // true
+
     </script>
 </body>
 </html>
