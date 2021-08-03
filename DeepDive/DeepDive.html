@@ -8,15 +8,30 @@
 </head>
 <body>
     <script>
-        function Person(name){
-            this.name = name;
-        }
-        const me = new Person('Lee');
 
-        const parent = {
-            sayHello = {
-            }
-        }
+{
+    {
+const numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const initValue = 0;
+const totalResult = numberList.reduce((initialValue, currentValue, currentIndex, array) => {
+    console.log('-------'); // --- 순회 구분선
+    console.log(initialValue) // reduce(initValue)의 값
+    console.log(currentValue) // numberList index 0번
+        return initialValue + currentValue;
+        // return의 결과값이 => initialValue값에 담긴다.
+}, initValue);
+console.log(totalResult); // 55
+}
+    function solution(arr){
+    return arr.reduce((prev, next)=> { 
+        console.log('prev:',prev);
+        console.log('next:',next);
+        return prev.length > next.length ? prev : next
+    }, '')
+}
+
+console.log(solution(["teacher","time","student","beautiful","good"]))
+}
     </script>
 </body>
 </html>
