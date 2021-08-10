@@ -11,32 +11,38 @@
         function solution(arr){
             let answer = Number.MIN_SAFE_INTEGER;
             let n = arr.length;
-            let sum1 = sum2 = 0;
+
+            let rowSum = 0; // 행
+            let columnSum = 0; // 열
+            let slash = 0 // 대각선
+            let backSlash = 0 // 역 대각선
+
             for(let i=0; i<n; i++){
-                sum1 = sum2 = 0;
+                rowSum = 0;
+                columnSum = 0;
                 for(let j=0; j<n; j++){
-                    sum1+=arr[i][j];
-                    sum2+=arr[j][i];
+                    rowSum += arr[i][j] // 행
+                    columnSum += arr[j][i] // 열
                 }
-                answer = Math.max(answer,sum1,sum2);
+                answer = Math.max(answer,columnSum,rowSum) // 행 열의 최대합
             }
-            sum1 = sum2 = 0;
-            for(let i=0; i<n; i++){ 
-                sum1 += arr[i][i];
-                sum2 += arr[i][n-i-1];
+            for(let i=0; i<n; i++){
+                slash += arr[i][i] // 대각선
+                backSlash += arr[i][n-i-1] //역 대각선
             }
-            answer = Math.max(answer, sum1, sum2);
-            console.log('i',answer);
+            answer = Math.max(answer, slash, backSlash)
+
+
             return answer;
         }
-        let str =[
+        let board =[
             [10, 13, 10, 12, 15],
             [12, 39, 30, 23, 11],
             [11, 25, 50, 53, 15],
             [19, 27, 29, 37, 27],
             [19, 13, 30, 13, 19],
         ]
-        console.log(solution(str));
+        console.log(solution(board));
     </script>
 </body>
 </html> 
