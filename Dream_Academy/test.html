@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+function solution(str){
+    return str.split('').reduce((prev, next) => {
+        console.log(prev);
+        console.log(next);
+        return prev.indexOf(next) === -1 ? prev + next : prev 
+    })
+}
+
+console.log(solution("ksekkset"))
+    </script>
 </body>
 </html>
