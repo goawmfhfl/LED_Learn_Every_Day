@@ -21,5 +21,21 @@
         let arr = [87, 89, 82, 100, 76]
         console.log(solution(arr));
     </script>
+    <script>
+        {
+        function solution(arr) {
+            const answer = [];
+            const copy = arr.slice();
+            arr.sort((a, b) => b - a);
+
+            for (let i = 0; i < arr.length; i++) {
+                answer.push(arr.indexOf(copy[i]) + 1);
+            }
+            return answer;
+            }
+            let arr = [87, 89, 82, 100, 76]
+            console.log(solution(arr));
+        }
+    </script>
 </body>
 </html>

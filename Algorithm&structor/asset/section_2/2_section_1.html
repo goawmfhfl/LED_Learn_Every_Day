@@ -20,5 +20,22 @@
         let arr = [7,3,9,5,6,12]
         console.log(solution(arr));
     </script>
+
+    <script>
+    {
+        function solution(arr) {
+            let answer = [];
+            arr.reduce((prev, next) => {
+                console.log(`prev: ${prev} next: ${next}`);
+            prev < next ? answer.push(next) : next
+            return next;
+            }, 0);
+            return answer;
+        }
+
+        let arr = [7, 3, 9, 5, 6, 12];
+        console.log(solution(arr));
+    }
+    </script>
 </body>
 </html>
