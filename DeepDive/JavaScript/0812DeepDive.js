@@ -111,3 +111,45 @@ console.clear()
     const bar = foo()
     bar();
 }
+
+{
+    function solution(arr){
+        return arr.filter((n, i) => {
+            console.log(`n : ${n}`)
+            console.log(`i : ${i}`)
+            if(i === 0) return true
+            else return arr[i - 1] < n 
+        })
+        }
+        
+        console.log(solution([7,3,9,5,6,12]))
+}
+{
+    function solution(arr){
+        let max = Number.MIN_SAFE_INTEGER
+        return arr.filter((height) => {
+            if(height > max){
+                max = height
+                return true
+            }
+        }).length
+    }
+    
+    console.log(solution([130,135,148,140,145,150,150,153]))
+}
+{
+    function solution(num) {
+        let answer = "";
+        let n = num.length;
+        console.log(n);
+        console.log(answer);
+        // for(let i=0; 0< n-4; i++){
+        //     console.log(num);
+        // }
+        return answer;
+    }
+    
+    let number = "01041263611"
+    console.log(solution(number))
+    
+}
