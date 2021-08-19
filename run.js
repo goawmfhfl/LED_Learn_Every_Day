@@ -1,8 +1,4 @@
-function solution(str){
-    const reg = new RegExp(`${str}`, 'gi')
-    console.log(reg);
-    return reg.test(str.split('').reverse('').join('')) ? 'YES' : 'NO'
-}
+class MyClass{};
 
-let str = "gooG";
-console.log(solution(str));
+const me = new MyClass();
+console.log(me);

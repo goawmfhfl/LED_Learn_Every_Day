@@ -8,25 +8,30 @@
 </head>
 <body>
     <script>
-        function solution(str){
-  const strArr = str.split('')
-  let result = ''
-  let idx = 1;
 
-  for(let i = 0; i <= strArr.length - 1; i++){
-      if(strArr[i] !== strArr[i+1]){
-          result += strArr[i] + (idx === 1 ? '' : idx)
-          idx = 1
-      } else {
-          idx++
-      }
-  }
+    var foo = 'bar'
+    let number = 3
+    const string = "Three"
 
-  return result
-}
-let str="KKHSSSSSSSE";
-console.log(solution(str));
- 
+    // console.log(foo); 1번
+    // console.log(number); 2번
+    // console.log(string); 3번
+
+    function add(){
+        console.log(number+string);
+    }
+    // console.log(add()); 4번
+    
+    class People{
+        constructor(name,contry){
+            this.name = name;
+            this.contry= contry;
+        }
+    }
+    const me = new People('Choi','Korea')
+    console.log(me);
+    // console.log(me); 5번
+
     </script>
 </body>
 </html>
