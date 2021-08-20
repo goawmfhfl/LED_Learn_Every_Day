@@ -8,15 +8,18 @@
 </head>
 <body>
     <script>
-function solution(str){
-    return str.split('').reduce((prev, next) => {
-        console.log(prev);
-        console.log(next);
-        return prev.indexOf(next) === -1 ? prev + next : prev 
-    })
-}
 
-console.log(solution("ksekkset"))
+    function Person(name){
+    this.name = name;
+    }
+
+    // 정적 메서드
+    Person.sayHi = function(){
+        console.log('Hi!');
+    }
+
+    // 정적 메서드 호출
+    Person.sayHi(); // Hi !
     </script>
 </body>
 </html>
