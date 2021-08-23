@@ -9,29 +9,24 @@
 <body>
     <script>
 
-    var foo = 'bar'
-    let number = 3
-    const string = "Three"
+// 첫 번째 for문을 순회한다
+// arr[4] = 4
 
-    // console.log(foo); 1번
-    // console.log(number); 2번
-    // console.log(string); 3번
+var arr = [];
 
-    function add(){
-        console.log(number+string);
-    }
-    // console.log(add()); 4번
-    
-    class People{
-        constructor(name,contry){
-            this.name = name;
-            this.contry= contry;
+for(var i= 0; i < 5; i++){
+    arr[i] = function(id){
+        return function(){
+            return id;
         }
-    }
-    const me = new People('Choi','Korea')
-    console.log(me);
-    // console.log(me); 5번
+    }(i);
+}
+for(var index in arr){
+    console.log(arr[index]()); // ?
+}
 
+    </script>
+    <script>
     </script>
 </body>
 </html>

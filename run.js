@@ -1,47 +1,39 @@
-function distanceCalculator(word) {
-    const length = word.length;
-    if (!length) {
-    return  null;
-    }
-    if (length <= 1) {
-    return '1'; 
-    }
+/**
+ * 
+ * 1. 도와주는 학생과 도움을 받는 학생이 한 짝이 된다.
+ * 2. m번의 수학테스트 결과를 나타내는 등수 !
+ * 3. A학생이 멘토 B학생이 멘티일 경우 ? A학생은 M번의 수학테스트에서 B보다 점수가 좋아야한다 !
+ * 4. M번의 수학 성적이 주어지면 멘토 멘티가 되는 짝을 만들 수 있는 경우가 총 몇가지 인가?
+ *  (3,1) (3,2) (4,2) 이 경우는 3가지임
+ * 5. 첫번째 줄에 반학생 수 4명 그리고 시험 테스트 횟수 3번이 주어진다
+ */
 
-    const distance = [...word].map((char, i) => ( i + 1));
-    for(let i = 0; i < Math.floor(length / 2); i++) {
-    if (distance[i] !== distance[length-i-1]) {
-        distance[length-i-1] = distance[i];
-    } 
-    }
-    return distance.join('');
-}
+/**
+ * 강의듣고 문제 풀이 도전하기
+ * 1. 4중 포문을 만든다
+ * 2. 첫번째 포문에는 멘토의 값을 두 번째 포문에는 멘티의 값을 세번째 네번째 포문에서는 등수의 값을 구한다
+ * 3. 그렇게 3번의 시험을 돌게되면 cnt가 3이 되는 경우의 수를 만들고 그 경우의 수를 정답으로 출력하라
+ */
 
-function solution(str, target) {
-    let answer = ""
-    let start = str[0] === target;
-    let end = str[str.length - 1] === target;
-
-    const words = str.split('e');
-    const distances = words.map((word) => {
-    return distanceCalculator(word)
-    });
-
-    for (let i = 0; i < distances.length; i++) {
-    if (i === 0 && start) {
-        answer +="0";
-        answer += !distances[i]? '' : distances[i];
-    } else if (i === distances.length - 1 && end) {
-        answer += !distances[i]? '' : distances[i];
-        answer += "0";
-    } else {
-        answer += "0";
-        answer += !distances[i]? '' : distances[i];
-    }
+function solution(n,m,test){
+    let answer = 0;
+    for(let i = 0; i<n; i++){
+        for(let j=0; j<n; j++){
+            let cnt = 0;
+            for(let k=0; k<m; j++){
+                let pi=0;
+                let pj=0;
+                for (let s=0; s<n; s++){
+                    if(test[k][s]===i) pi=s;
+                    if(test[k][s]===j) pj=s; 
+                }
+                if(pi<pj) cnt++
+            }
+            if(cnt===m) answer++
+        }
     }
     return answer;
 }
 
-const str = 'teachermode';
-const target = 'e';
-
-console.log(solution(str, target));
+let test = [[3,4,1,2],[4,3,2,1],[3,1,4,2]]
+console.log(solution(4,3,test));
