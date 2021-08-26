@@ -8,37 +8,38 @@
 </head>
 <body>
     <script>
-  function solution(n,m,test){
-    let answer=0;
-    let tmp = []
-    for(let i=1; i<=n; i++){
-        for(let j=1; j<=n; j++){
-            let cnt = 0;
-            for(let k=0; k<m; k++){
-                let pi=0
-                let pj=0;
-                for(let s=0; s<n; s++){
-                    if(test[k][s]===i) pi = s
-                    if(test[k][s]===j) pj = s
-                }
-                if(pi<pj) cnt++
-            }
-            if(m===cnt) {
-                tmp.push([i,j])
-                answer++
-            }
+
+
+function solution(m, product) {
+    let answer = []
+    for(let i=0; i<product.length; i++){
+        let money = m;
+        let cnt = 0;
+        // 할인해주기
+        product[i][0] = product[i][0] * 0.5
+        // 오름차순 해주기
+        let sortedArr = product
+        .map(value => value.reduce((pre,cur) => pre + cur))
+        .sort((a,b)=> a-b)
+
+        console.log(sortedArr);
+
+        for(let j=0; j<sortedArr.length; j++){
+            if(money<sortedArr[j]) break;
+            money -= sortedArr[j]
+            cnt++
         }
-        
+        answer.push(cnt)
+        // 초기화
+        product[i][0] = product[i][0] * 2
     }
-    console.log(tmp);
-    return answer;
+    return Math.max(...answer)
 }
 
-let arr=[
-    [3, 4, 1, 2],
-    [4, 3, 2, 1],
-    [3, 1, 4, 2]];
-console.log(solution(4,3,arr));
+let arr = [[6, 6], [2, 2],[4, 3],[4, 5],[10, 3]];
+console.log(solution(28, arr));
+
+
     </script>
 </body>
 </html>
