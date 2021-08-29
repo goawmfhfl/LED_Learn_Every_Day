@@ -70,3 +70,42 @@ console.log('----------');
     }
     console.log(removeAll(arr,2)); // [ 1, 3, 1 ]
 }
+{
+
+    console.log(Array.isArray([])); // true
+    console.log(Array.isArray([1,2])); // true
+    console.log(Array.isArray(new Array())); // true
+
+    console.log(Array.isArray()); // false
+    console.log(Array.isArray({})); // false
+    console.log(Array.isArray(null)); // false
+    console.log(Array.isArray(undefined)); // false
+    console.log(Array.isArray(1)); // false
+    console.log(Array.isArray('Array')); //false
+    console.log(Array.isArray(true)); // false
+    console.log(Array.isArray(false)); // false
+    console.log(Array.isArray({0: 1, length: 1})); // false
+
+}
+{
+    const arr1 = [3,4]
+    const copyArr = arr1.slice() // 얕은 복사
+
+    arr1.unshift(1,2)
+    console.log(arr1); // [1,2,3,4]
+
+    arr1.push(5,6)
+    console.log(arr1); // [ 1, 2, 3, 4, 5, 6 ]
+    console.log('splice :',copyArr) // [3,4]
+
+// unshift와 push메서드는 concat 메서드로 대체할 수 있다.
+
+    const arr2 = [3,4]
+    let result = [1,2].concat(arr2)
+    console.log(result); // [ 1, 2, 3, 4 ]
+
+    result = result.concat(5,6)
+    console.log(result); // [ 1, 2, 3, 4, 5, 6 ]
+
+    console.log(arr2)// [ 3, 4 ]
+}    

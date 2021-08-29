@@ -8,36 +8,44 @@
 </head>
 <body>
     <script>
+function solution(arr){ 
+
+let max = Number.MIN_SAFE_INTEGER
+let result = 0
 
 
-function solution(m, product) {
-    let answer = []
-    for(let i=0; i<product.length; i++){
-        let money = m;
-        let cnt = 0;
-        // 할인해주기
-        product[i][0] = product[i][0] * 0.5
-        // 오름차순 해주기
-        let sortedArr = product
-        .map(value => value.reduce((pre,cur) => pre + cur))
-        .sort((a,b)=> a-b)
 
-        console.log(sortedArr);
 
-        for(let j=0; j<sortedArr.length; j++){
-            if(money<sortedArr[j]) break;
-            money -= sortedArr[j]
-            cnt++
-        }
-        answer.push(cnt)
-        // 초기화
-        product[i][0] = product[i][0] * 2
+arr.forEach((item) => {
+    let tmp = [...new String(item)].reduce((prev, next) => {
+        return prev + parseInt(next)
+
+    }, 0)
+
+
+
+
+    if( max <= tmp && item > result){
+
+        max = tmp
+
+        result = item
+
     }
-    return Math.max(...answer)
+
+})
+
+
+
+
+return result
+
 }
 
-let arr = [[6, 6], [2, 2],[4, 3],[4, 5],[10, 3]];
-console.log(solution(28, arr));
+
+
+
+console.log(solution([128,460,603,40,521,137,123])) 
 
 
     </script>
