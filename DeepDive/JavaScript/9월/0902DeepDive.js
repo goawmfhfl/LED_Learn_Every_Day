@@ -141,3 +141,31 @@ console.log('----------');
                 console.log(num); // 1 2 3 5 8
             }
 }
+{
+    const isIterable = v => v !== null && typeof v[Symbol.iterator] === 'function'
+    console.log(isIterable([])); // // true
+    console.log(isIterable('')); // // true
+    console.log(isIterable(new Map())); // // true
+    console.log(isIterable(new Set())); // true
+    console.log(isIterable({})); // false
+}
+{
+    const arr = [1,2,3]
+    console.dir(arr);
+}
+{
+    const arrayLike = {
+        0:1,
+        1:2,
+        2:3,
+        length : 3
+    };
+
+    // Array.from은 유사 배열 객체 또는 이터러블을 배열로 반환한다
+    const arr = Array.from(arrayLike)
+    console.log(arr); // [ 1, 2, 3 ]
+    
+    for(const num of arr){
+        console.log('Array.from :',num);
+    }
+}
