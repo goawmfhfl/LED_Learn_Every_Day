@@ -1,11 +1,21 @@
 function solution(s){
-    let answer = []
+    let answer;
+    let stack = [];
     for(let x of s){
-        if(x === ')') while(answer.pop()!=='(');
-        else answer.push(x)
+        if(!isNaN(x)) stack.push(Number(x))
+        else{
+            let rt = stack.pop()
+            let lt = stack.pop()
+            if(x === '+') stack.push(lt+rt)
+            else if(x === '-') stack.push(lt-rt)
+            else if(x === '*') stack.push(lt*rt)
+            else if(x === '/') stack.push(lt/rt)
+        }
     }
-    return answer.join('')
+    answer = stack[0]
+    return answer;
 }
 
-let str = "(A(BC)D)EF(G(H)(IJ)K)LM(N)"
-console.log(solution(str)); 
+const str = '352+*9-'
+
+console.log(solution(str));
