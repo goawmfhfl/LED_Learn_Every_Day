@@ -1,21 +1,15 @@
-function solution(s){
-    let answer;
-    let stack = [];
-    for(let x of s){
-        if(!isNaN(x)) stack.push(Number(x))
-        else{
-            let rt = stack.pop()
-            let lt = stack.pop()
-            if(x === '+') stack.push(lt+rt)
-            else if(x === '-') stack.push(lt-rt)
-            else if(x === '*') stack.push(lt*rt)
-            else if(x === '/') stack.push(lt/rt)
+function solution(arr) {
+
+    let answer = arr
+    for(let i=0; i<arr.length-1; i++){
+        let idx = i
+        for(let j=i+1; j<arr.length; j++){
+            if(arr[idx]>arr[j]) idx=j
         }
+        [arr[i],arr[idx]]=[arr[idx],arr[i]]
     }
-    answer = stack[0]
-    return answer;
+    return answer
 }
 
-const str = '352+*9-'
-
-console.log(solution(str));
+let arr = [13, 5, 11, 7, 23, 15]
+console.log(solution(arr)); 
