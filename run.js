@@ -1,15 +1,17 @@
 function solution(arr) {
-
     let answer = arr
-    for(let i=0; i<arr.length-1; i++){
-        let idx = i
-        for(let j=i+1; j<arr.length; j++){
-            if(arr[idx]>arr[j]) idx=j
+    for(let i=1; i<arr.length; i++){
+        let tmp = arr[i];
+        let j;
+        for(j=i-1; j>=0; j--){
+            if(arr[j]>tmp) arr[j+1]=arr[j]
+            else break;
         }
-        [arr[i],arr[idx]]=[arr[idx],arr[i]]
+        arr[j+1]=tmp
     }
     return answer
 }
 
-let arr = [13, 5, 11, 7, 23, 15]
+
+let arr = [11,7,5,6,10,9]
 console.log(solution(arr)); 
