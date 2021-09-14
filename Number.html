@@ -8,18 +8,15 @@
 </head>
 <body>
     <script>
-const solution = (total, target) => {
-total = Array(total)
-.fill(null)
-.map((v, i) => i + 1);
-while (total.length > 1)
-for (let i = 0; i < target; i++)
-    i === target - 1 ? total.shift() : total.push(total.shift());
-
-return total[0];
-};
-const result = solution(8, 3);
-console.log(result);
+function solution(arr) {
+    let answer=[];
+    let sortedArr=[...arr].sort((a,b)=>a-b).forEach((v,i)=>{
+        arr[i]!==v ? answer.push(i+1) : '';
+    })
+    return answer;
+}
+let arr = [120,125,152,130,135,135,143,127,160];
+console.log(solution(arr));
     </script>
 </body>
 </html>
