@@ -8,15 +8,29 @@
 </head>
 <body>
     <script>
-function solution(arr) {
-    let answer=[];
-    let sortedArr=[...arr].sort((a,b)=>a-b).forEach((v,i)=>{
-        arr[i]!==v ? answer.push(i+1) : '';
-    })
-    return answer;
-}
-let arr = [120,125,152,130,135,135,143,127,160];
-console.log(solution(arr));
+
+const Animal = (function(){
+        function Animal(name){
+            this.name = name;
+        };
+        Animal.prototype.sayDogName = function(){
+            console.log(`Hi! My name is ${this.name}`);
+        };
+
+        return Animal
+    }());
+
+    const me = new Animal('Snoopy')
+
+    me.sayDogName = function(){
+        console.log(`Hey ~ do you know my name ${this.name}?`);
+    }
+
+    me.sayDogName() // 🔖 1번
+    delete me.sayDogName;
+    me.sayDogName() // 🔖 2번
+    delete Animal.prototype.sayDogName;
+    me.sayDogName() // 🔖 3번
     </script>
 </body>
 </html>
