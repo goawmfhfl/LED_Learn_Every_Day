@@ -1,22 +1,26 @@
-function solution(str,target){
-    let answer;
-    str.sort((a,b)=>a-b);
-    let lt = 0 , rt = str.length-1;
 
-    while(lt<=rt){
-        let mid = parseInt((lt+rt)/2);
-        if(str[mid]===target){
-            answer = mid+1;
-            break;
+function solution(arr) {
+    let answer = "NO";
+    let total = arr.reduce((a,b)=>a+b,0)
+    let flag = 0;
+    let n = arr.length;
+
+    function DFS(L,sum) {
+        if(flag) return ;
+        if(L===n){
+            if((total - sum) === sum){
+                answer = "YES"
+                flag = 1;
+            }
         }
-        else if(str[mid]>target){
-            rt = mid-1;
+        else{
+            DFS(L+1, sum+arr[L])
+            DFS(L+1, sum)
         }
-        else lt = mid +1;
     }
-    return answer;
+    DFS(0,0)
+return answer; 
 }
 
-const str = [23,87,65,12,57,32,99,81];
-
-console.log(solution(str,32));
+let arr = [1,3,5,6,7,10]
+console.log(solution(arr));
