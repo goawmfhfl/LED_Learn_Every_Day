@@ -9,21 +9,17 @@
 <body>
     <script>
 
-    var value = 1;
-    const obj = {
-        value: 100,
-        foo(){
-            console.log("foo's this ", this); // foo's this  {value: 100, foo: ƒ}
-            console.log("foo's this.vlaue ",this.value); // foo's this.vlaue  100 
-            // 메서드 내에서 정의한 중첩 함수
-            function bar() {
-                console.log("bar's this ", this); // Window
-                console.log("bar's this.vlaue ",this.value); // 1
-            };
-        bar()
-        },
-    }
-    obj.foo();
+const person = {
+        name : 'choi',
+
+        foo(callback){
+            setTimeout(()=>callback,100)
+        }
+    };
+	
+    person.foo( () =>{
+        console.log(`Hi My name is ${this.name}.`);
+    })
 
     </script>
 </body>

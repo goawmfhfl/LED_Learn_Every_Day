@@ -189,3 +189,27 @@
     console.log(getName());
 		// 일반 함수로 호출된 getName 함수 내부의 this.name은 브라우저 환경에서 window.name과 같다.
 }
+{
+    // 전역 함수 foo의 상위 스코프는 전역이므로 화살표 함수 foo의 this는 전역 객체를 가리킨다.
+const foo = () => console.log(this)
+foo()
+
+const person = {
+    name:'choi',
+    sayHi: ()=>console.log(`Hi ${this.name}`)
+}
+
+// sayHi 프로퍼티에 할당된 화살표 함수 내부의 this는 상위 스코피은 전역의 this를 가리키는
+// 전역 객체를 가리키므로 이 예제를 브라우저에서 실행하면 this.name은 빈 문자열을 갖는 window.name과 같다
+// 전역 객체 window에는 빌트인 프로퍼티 name이 존재한다
+person.sayHi(); // Hi
+}
+{
+    const person = {
+        name: 'choi',
+        sayHi(){
+            console.log(`Hi ${this.name}`); // Hi choi
+        }
+    }
+    console.log(person.sayHi());
+}
