@@ -1,5 +1,23 @@
-// x는 전역 변수다
-var x = 'foo';
 
-console.log('mjs :',x); // foo
-console.log('window.x :',window.x); // undefined
+function solution(n,m) {
+  let answer = [];
+  let tmp = Array.from({length:m},()=>0);
+
+  function DFS(L) {
+    if(L===m){
+      answer.push(tmp);
+    }
+    else{
+      for(let i=1; i<=n; i++){
+        tmp[L]=i;
+        DFS(L+1,i);
+      }
+    }
+    
+  }
+  DFS(0)
+
+  return answer;
+}
+
+console.log(solution(3,2)); 

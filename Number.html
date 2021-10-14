@@ -10,16 +10,16 @@
     <script>
 
 const person = {
-        name : 'choi',
+    name : 'choi',
 
-        foo(callback){
-            setTimeout(()=>callback,100)
-        }
-    };
-	
-    person.foo( () =>{
-        console.log(`Hi My name is ${this.name}.`);
-    })
+    foo(callback){
+        setTimeout(callback ,100)
+    }
+};
+
+person.foo(function(){
+    console.log(this); // 🔖 1번 Hi my name is 
+})
 
     </script>
 </body>
