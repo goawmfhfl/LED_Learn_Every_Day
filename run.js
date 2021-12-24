@@ -1,23 +1,11 @@
+var i = 10;
+    function foo (){
+        var i = 100;
 
-function solution(n,m) {
-  let answer = [];
-  let tmp = Array.from({length:m},()=>0);
-
-  function DFS(L) {
-    if(L===m){
-      answer.push(tmp);
+        for(var i = 1; i < 3 ; i++){
+            console.log('for문 :',i); // ??
+        }
+        console.log('함수선언문 :', i) // ??
     }
-    else{
-      for(let i=1; i<=n; i++){
-        tmp[L]=i;
-        DFS(L+1,i);
-      }
-    }
-    
-  }
-  DFS(0)
-
-  return answer;
-}
-
-console.log(solution(3,2)); 
+    foo();
+    console.log('전역스코프 :',i) // ??

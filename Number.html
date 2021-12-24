@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
 
-const person = {
-    name : 'choi',
 
-    foo(callback){
-        setTimeout(callback ,100)
-    }
-};
+function fetchItems() {
+  return new Promise(function(resolve, reject) {
+    var items = [1,2,3];
+    resolve(items)
+  });
+}
+function fetchItems2(){
+  return new Promise(function(resolve, reject) {
+    var items = [3,4,5];
+    resolve(items)
+  });
+}
 
-person.foo(function(){
-    console.log(this); // 🔖 1번 Hi my name is 
-})
+async function logItems() {
+  var resultItems = await fetchItems();
+  console.log(resultItems); // [1,2,3]
+}
 
-    </script>
+fetchItems()
+.then (resultItem =>console.log(resultItem))
+
+
+
+// // GET 요청을 위한 비동기 함수
+// const get = (url,callback) => {
+//             const xhr = new XMLHttpRequest();
+//             xhr.open('GET', url);
+//             xhr.send();
+
+//             xhr.onload = () => {
+//                 if(xhr.status === 200){
+//                     // 서버에 응답을 콜백 함수에 전달하면서 호출하여 응답에 대한 후속 처리를 한다.
+//                     callback(JSON.parse(xhr.response))
+//                 }else{
+//                     console.error(`${xhr.status},${xhr.statusText}`);
+//                 }
+//             };
+//         };
+
+//         // id가 1인 post 취득
+//         // 서버의 응답에 대한 후속 처리를 위한 콜백 함수를 비동기 함수인 get에 전달해야 한다.
+//         const url = 'https://jsonplaceholder.typicode.com'
+        
+//         // 객체의 키 값만 따로 전달받았을 때.
+//         // `${url}/posts/1` 의 출력값
+// // }
+// //   "userId": 1,
+// //   "id": 1,
+// //   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+// //   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+// // }
+
+//         get(`${url}/posts/1`,({userId})=>{
+//             console.log('userId :',userId); // 1
+//             //post의 userId를 사용하여 user 정보 취득
+//             get(`${url}/users/${userId}`,userInfo=>{
+//             console.log(userInfo.name); // Leanne Graham
+//             })
+//         })
+  </script>
 </body>
+
 </html>
