@@ -1,12 +1,21 @@
 var express = require("express");
 var router = express.Router();
 const loginCheck = require("../module/loginCheck");
+const upload = require("../module/imageUpload");
 
 /* GET home page. */
 
 router.get("/", loginCheck, (req, res) => {
   res.status(200).json({
     message: "login suceess",
+  });
+});
+
+router.post("/upload", upload.single("image"), (req, res) => {
+  const file = req.file;
+  console.log(file);
+  res.status(200).json({
+    message: "upload success",
   });
 });
 
