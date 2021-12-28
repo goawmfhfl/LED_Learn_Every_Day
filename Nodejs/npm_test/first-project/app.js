@@ -8,7 +8,15 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const templateRouter = require("./routes/template");
 
+const session = require("express-session");
 var app = express();
+app.use(
+  session({
+    secret: "first Project",
+    resave: false,
+    saveUninitialized: true,
+  }),
+);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
