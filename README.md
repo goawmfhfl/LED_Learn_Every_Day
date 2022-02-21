@@ -2,10 +2,22 @@
 ✏️  **매일매일 성장하는 기록을 담은 레파지토리 입니다.**
 
 --------
-- **Javascript ~ ing**
-- **Algorithm ~ ing**
-- React - 학습 예정
-- git - 학습 예정
+<p align="center">
+<img src="https://img.shields.io/badge/HTML5-63a3cf?style=for-the-badge&logo=HTML5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-63a3cf?style=for-the-badge&logo=CSS3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-b098d9?style=for-the-badge&logo=JavaScript&logoColor=white">
+<br/>
+<img src="https://img.shields.io/badge/React-71b283?style=for-the-badge&logo=React&logoColor=white">
+<img src="https://img.shields.io/badge/Redux-63a3cf?style=for-the-badge&logo=React&logoColor=white">
+<img src="https://img.shields.io/badge/styledcomponents-63a3cf?style=for-the-badge&logo=styled-components&logoColor=white">
+</p>
+ㅌ
+<p align="center">
+<img src="https://img.shields.io/badge/Git-63a3cf?style=for-the-badge&logo=Git&logoColor=white">
+<img src="https://img.shields.io/badge/Notion-b098d9?style=for-the-badge&logo=Notion&logoColor=white">
+<img src="https://img.shields.io/badge/Conmunication-b098d9?style=for-the-badge&logo=googlechat&logoColor=white">
+<img src="https://img.shields.io/badge/LeaderShip-63a3cf?style=for-the-badge&logo=Opsgenie&logoColor=white">
+</p>
 ---
 ## **Javascript**
 >## Dream Coding Ellie
